@@ -1,0 +1,43 @@
+{
+  "name": "figma-discord-presence",
+  "version": "1.0.0",
+  "description": "Discord Rich Presence for Figma - Show your design status automatically",
+  "main": "src/index.js",
+  "bin": {
+    "figma-presence": "./bin/cli.js",
+    "figma-discord": "./bin/cli.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node bin/cli.js --help",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "discord",
+    "rich-presence",
+    "figma",
+    "design",
+    "rpc"
+  ],
+  "author": "@uwayxt",
+  "license": "MIT",
+  "dependencies": {
+    "discord-rpc": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uwayxt/figma-discord-presence"
+  },
+  "bugs": {
+    "url": "https://github.com/uwayxt/figma-discord-presence/issues"
+  },
+  "homepage": "https://github.com/uwayxt/figma-discord-presence#readme"
+}
