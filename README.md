@@ -2,6 +2,244 @@
 
 **by @uwayxt**
 
+Automatically display your Figma activity status on Discord! Show your professional design work to friends and colleagues with a beautiful rich presence that updates in real-time.
+
+[![npm version](https://img.shields.io/npm/v/figma-discord-presence.svg)](https://www.npmjs.com/package/figma-discord-presence)
+[![npm downloads](https://img.shields.io/npm/dm/figma-discord-presence.svg)](https://www.npmjs.com/package/figma-discord-presence)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+![Discord Status Preview](https://via.placeholder.com/400x100/7289DA/ffffff?text=🎨+Designing+in+Figma)
+
+## ✨ Features
+
+- 🎯 **Automatic Detection** - Detects both Figma Desktop and Web versions
+- 🎨 **Professional Status** - Shows "🎨 Designing in Figma" on your Discord profile  
+- ⚡ **Real-time Updates** - Updates automatically in background
+- 🖥️ **Cross-platform** - Works on Windows, macOS, and Linux
+- 🔗 **Custom Buttons** - Add portfolio and contact links
+- 🎭 **Rich Presence** - Timestamps, icons, and detailed status
+- 🔄 **Auto Reconnect** - Handles Discord disconnections gracefully
+- 🚀 **Global CLI** - Install once, use anywhere with simple commands
+- 🤫 **Silent Background** - Runs quietly without disturbing your workflow
+
+## 📸 Preview
+
+When you're using Figma, your Discord profile will show:
+
+```
+🎨 Designing in Figma
+Creating amazing designs
+🕐 for 2 hours 31 minutes
+[View Portfolio] [Hire Me]
+```
+
+## 🚀 Quick Start
+
+### Global Installation (Recommended)
+
+```bash
+# Install globally via npm
+npm install -g figma-discord-presence
+
+# Quick setup
+figma-presence setup
+
+# Start the presence
+figma-presence start
+
+# That's it! 🎉
+```
+
+## 🎮 CLI Commands
+
+### Setup & Configuration
+```bash
+figma-presence setup                    # Interactive setup wizard
+figma-presence config                   # View current config
+figma-presence config clientId 123456  # Set Discord Application ID
+figma-presence config details "Working on UI"  # Custom status text
+```
+
+### Process Management  
+```bash
+figma-presence start                    # Start Discord presence
+figma-presence stop                     # Stop Discord presence
+figma-presence restart                  # Restart Discord presence
+figma-presence status                   # Check running status
+```
+
+### Debugging & Testing
+```bash
+figma-presence debug                    # Test Discord connection
+figma-presence test                     # Test Figma detection
+figma-presence --help                   # Show help
+figma-presence --version                # Show version
+```
+
+## ⚙️ Setup Discord Application
+
+### 1. Create Discord Application
+
+1. Go to [Discord Developer Portal](https://discord.com/developers/applications)
+2. Click "New Application" and name it "Figma"
+3. Copy the **Application ID**
+
+### 2. Add Rich Presence Assets (Optional)
+
+1. Go to "Rich Presence" → "Art Assets"
+2. Upload a Figma logo image with key: `figma_logo`
+3. Upload a status icon with key: `online_status`
+
+### 3. Configure Client ID
+
+```bash
+# Method 1: Interactive setup
+figma-presence setup
+
+# Method 2: Direct config
+figma-presence config clientId YOUR_APPLICATION_ID_HERE
+```
+
+## 🎯 Usage Examples
+
+### Personal Branding
+Show clients and colleagues that you're actively working on design projects.
+
+### Team Collaboration  
+Let your design team know when you're available for feedback or collaboration.
+
+### Professional Status
+Display a productive, professional status instead of "Playing a game".
+
+## 🖥️ Platform Support
+
+| Platform | Support | Features |
+|----------|---------|----------|
+| **Windows** | ✅ Full | Desktop + Web detection, Background monitoring |
+| **macOS** | ✅ Full | Desktop detection, Process monitoring |  
+| **Linux** | ✅ Basic | Desktop detection |
+
+## 🛠️ Configuration Options
+
+```bash
+# Status Text
+figma-presence config details "🎨 Designing in Figma"
+figma-presence config state "Creating amazing designs"
+
+# Update Interval (milliseconds)
+figma-presence config updateInterval 15000
+
+# Enable/Disable Debug Mode
+figma-presence config debug true
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**❌ "Could not connect to Discord"** 
+```bash
+# Make sure Discord Desktop is running (not web version)
+figma-presence debug
+```
+
+**❌ "Figma not detected"**
+```bash
+# Test Figma detection
+figma-presence test
+```
+
+**❌ "Invalid Client ID"**
+- Make sure you're using the Application ID, not Client Secret
+- Run `figma-presence setup` to reconfigure
+
+**❌ Activity not showing on Discord**
+- Check Discord → Settings → Activity Privacy
+- Enable "Display current activity as a status message"
+- Restart Discord and try again
+
+### Debug Commands
+
+```bash
+figma-presence debug          # Test Discord RPC connection
+figma-presence test          # Test Figma process detection  
+figma-presence status        # Show current running status
+```
+
+## 📊 Advanced Usage
+
+### Custom Status Messages
+
+```bash
+# Set custom details
+figma-presence config details "🚀 Building awesome UI"
+
+# Set custom state  
+figma-presence config state "Design system work"
+
+# Add portfolio buttons (edit config file)
+figma-presence config
+```
+
+### Running as System Service
+
+**Windows (Task Scheduler)**
+```bash
+# Add to Windows startup
+figma-presence start
+# The process will run in background
+```
+
+**macOS (launchd)**
+```bash
+# Create launchd plist for auto-start
+figma-presence start
+```
+
+**Linux (systemd)**
+```bash
+# Create systemd service
+figma-presence start
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to:
+
+- 🐛 Report bugs
+- 💡 Suggest new features  
+- 🔧 Submit pull requests
+- 📝 Improve documentation
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Links
+
+- [NPM Package](https://www.npmjs.com/package/figma-discord-presence)
+- [GitHub Repository](https://github.com/uwayxt/figma-discord-presence)
+- [Discord Developer Portal](https://discord.com/developers/applications)
+- [Issue Tracker](https://github.com/uwayxt/figma-discord-presence/issues)
+
+---
+
+**Made with ❤️ by @uwayxt**
+
+*Show the world you're a professional designer! ✨*
+
+## 🎖️ Badge for your README
+
+Show off that you're using Figma Discord Presence:
+
+```markdown
+[![Figma Discord Presence](https://img.shields.io/badge/Discord-Figma%20Status-7289da?logo=discord&logoColor=white)](https://www.npmjs.com/package/figma-discord-presence)
+```
+
+[![Figma Discord Presence](https://img.shields.io/badge/Discord-Figma%20Status-7289da?logo=discord&logoColor=white)](https://www.npmjs.com/package/figma-discord-presence)# 🎨 Figma Discord Rich Presence
+
+**by @uwayxt**
+
 Automatically display your Figma activity status on Discord! Show your professional design work to friends and colleagues with a beautiful rich presence.
 
 ![Discord Status Preview](https://via.placeholder.com/400x100/7289DA/ffffff?text=🎨+Designing+in+Figma)
